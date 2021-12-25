@@ -24,7 +24,7 @@ double Integral (double a, double b, double n)
 }
 
 
-/*double Integral_simd (double a, double b, double n)
+double Integral_simd (double a, double b, double n)
 {
 	double dx = (b - a) / n;
 	double I = 0.0;
@@ -51,7 +51,7 @@ double Integral_parallel (double a, double b, double n)
 	};
 
 	return I;
-}*/
+}
 
 
 
@@ -74,7 +74,7 @@ int main()
 
 	std::cout << "time: " << sec << "    I = " << I << "\n";
 
-	/*start = std::chrono::high_resolution_clock::now();
+	start = std::chrono::high_resolution_clock::now();
 	I1 = Integral(lower_bound, upper_bound, precision);
 	finish = std::chrono::high_resolution_clock::now();
 
@@ -93,7 +93,7 @@ int main()
 
 	sec = duration.count();
 
-	std::cout << "time: " << sec << "    I2 = " << I2 << "\n";*/
+	std::cout << "time: " << sec << "    I2 = " << I2 << "\n";
 
 	return 0;
 }
